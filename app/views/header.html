@@ -1,0 +1,51 @@
+<div class="navbar navbar-inverse navbar-fixed-top" id="header">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" ui-sref="index">Anatas</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-inverse-collapse">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="index">Home</a></li>
+                <li><a ui-sref="download">Download</a></li>
+                <li><a ui-sref="blog">Blog</a></li>
+                <li><a ui-sref="dragon">Dragon</a></li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control col-md-8" placeholder="Search">
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li ng-if="!loggedIn">
+                    <a ng-click="openLogin()">
+                        <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                </li>
+                <li class="dropdown" ng-if="loggedIn">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <font size="5" color="white" face="verdana"><i>{{username}}</i></font> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a ng-click="logOut()"> Logout</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-ban-circle"></span> Management</a></li>
+                    </ul>
+                </li>
+                <!--
+                <li ng-if="loggedIn">
+                    <a ng-click="logOut()">
+                        <span class="glyphicon glyphicon-log-in"></span> Logout</a>
+                </li>
+-->
+                <!--                <li><a href="#"><span class="glyphicon glyphicon-ban-circle"></span> Management</a></li>-->
+            </ul>
+        </div>
+    </div>
+</div>
