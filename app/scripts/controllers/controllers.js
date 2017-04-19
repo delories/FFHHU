@@ -4,7 +4,7 @@
 var app = angular.module('ffhhuApp')
 
 .controller('HeadCtrl', ['$scope', '$state', '$rootScope', 'ngDialog', 'AuthFactory', function ($scope, $state, $rootScope, ngDialog, AuthFactory) {
-    
+
     $scope.loggedIn = false;
     $scope.username = '';
     $scope.openLogin = function () {
@@ -38,6 +38,14 @@ var app = angular.module('ffhhuApp')
     $scope.stateis = function (curstate) {
         return $state.is(curstate);
     };
+    $scope.openRegister = function () {
+        ngDialog.open({
+            template: 'views/register.html',
+            scope: $scope,
+            className: 'ngdialog-theme-plain',
+            controller: "RegisterController"
+        });
+    };
 }])
 
 .controller('LoginController', ['$scope', 'ngDialog', '$localStorage', 'AuthFactory', function ($scope, ngDialog, $localStorage, AuthFactory) {
@@ -50,15 +58,6 @@ var app = angular.module('ffhhuApp')
         ngDialog.close();
     };
 
-    $scope.openRegister = function () {
-        ngDialog.open({
-            template: 'views/register.html',
-            scope: $scope,
-            className: 'ngdialog-theme-plain',
-            controller: "RegisterController"
-        });
-    };
-
 
 }])
 
@@ -67,12 +66,21 @@ var app = angular.module('ffhhuApp')
     $scope.register = {};
     $scope.loginData = {};
 
-    $scope.doRegister = function() {
+    $scope.doRegister = function () {
         console.log('Doing registration', $scope.registration);
 
         AuthFactory.register($scope.registration);
-        
+
         ngDialog.close();
 
     };
+}])
+
+.controller('DownloadController', ['$scope', '$localStorage', function ($scope, $localStorage) {
+
+    $scope.filter = {};
+    $scope.filter.colleage = "物联网";
+    $scope.filter.year = 2015;
+    $scope.filter.cousera= "高等数学";
+
 }])

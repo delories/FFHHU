@@ -1,0 +1,41 @@
+<div class="container">
+    <br>
+    <br>
+    <ol class="breadcrumb">
+        <li><a href="#">{{filter.colleage}}</a></li>
+        <li><a href="#">{{filter.year}}</a></li>
+        <li class="active">{{filter.cousera}}</li>
+    </ol>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-xs-12 col-xs-offset-0">
+            <div ng-click="filter.colleage='企管' " class="btn btn-success">企业管理学院</div>
+            <div ng-click="filter.colleage='物联' " class="btn btn-warning">物联网学院</div>
+            <div ng-click="filter.colleage='机电' " class="btn btn-danger">机电工程学院</div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-12 col-xs-offset-0">
+            <div ng-click="filter.year=2010 " class="btn btn-danger"> 2010 </div>
+            <div ng-click="filter.year=2011 " class="btn btn-success"> 2011 </div>
+            <div ng-click="filter.year=2012 " class="btn btn-info"> 2012 </div>
+            <div ng-click="filter.year=2013 " class="btn btn-primary"> 2013 </div>
+            <div ng-click="filter.year=2014 " class="btn btn-success"> 2014 </div>
+            <div ng-click="filter.year=2015 " class="btn btn-warning"> 2015 </div>
+            <div ng-click="filter.year=2016 " class="btn btn-danger"> 2016 </div>
+            <div ng-click="filter.year=2017 " class="btn btn-success"> 2017 </div>
+            <div ng-click="filter.year=2018 " class="btn btn-info"> 2018 </div>
+        </div>
+    </div>
+    <br>
+    <div ng-if=" filter.colleage=='物联' ">
+        <div ng-click="filter.cousera='高等数学' " class="btn btn-success">高等数学</div>
+        <div ng-click="filter.cousera='线性代数' " class="btn btn-warning">线性代数</div>
+        <div ng-click="filter.cousera='概率论' " class="btn btn-warning">概率论</div>
+    </div>
+    <br>
+    <br>
+    <br>
+</div>

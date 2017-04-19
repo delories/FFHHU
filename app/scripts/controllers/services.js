@@ -155,3 +155,14 @@ angular.module('ffhhuApp')
         return authFac;
 
 }])
+
+.factory('FileFactory', ['$resource', '$http', '$localStorage', '$rootScope', '$window', 'baseURL', function ($resource, $http, $localStorage, $rootScope, $window, baseURL) {
+    return $resource(baseURL + "search/all", null, {
+           action1: {
+             method: 'GET',
+             url: baseURL + "search/all",
+             isArray: true  
+           }
+       });
+
+}])

@@ -28,6 +28,22 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        .state('aboutus', {
+            url: '/aboutus',
+            views: {
+                'header': {
+                    templateUrl: 'views/header.html',
+                    controller: 'HeadCtrl'
+                },
+                'content': {
+                    templateUrl: 'views/aboutus.html',
+                    //                controller: 'IndexController'
+                },
+                'footer': {
+                    templateUrl: 'views/footer.html',
+                }
+            }
+        })
         .state('download', {
             url: '/download',
             views: {
@@ -36,7 +52,8 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                     controller: 'HeadCtrl'
                 },
                 'content': {
-                    templateUrl: 'views/download.html'
+                    templateUrl: 'views/download.html',
+                    controller: 'DownloadController'
                 },
                 'footer': {
                     templateUrl: 'views/footer.html',

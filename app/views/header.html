@@ -1,51 +1,163 @@
-<div class="navbar navbar-inverse navbar-fixed-top" id="header">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-            <a class="navbar-brand" ui-sref="index">Anatas</a>
-        </div>
-        <div class="navbar-collapse collapse navbar-inverse-collapse">
-            <ul class="nav navbar-nav">
-                <li><a ui-sref="index">Home</a></li>
-                <li><a ui-sref="download">Download</a></li>
-                <li><a ui-sref="blog">Blog</a></li>
-                <li><a ui-sref="dragon">Dragon</a></li>
-            </ul>
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control col-md-8" placeholder="Search">
-                </div>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li ng-if="!loggedIn">
-                    <a ng-click="openLogin()">
-                        <span class="glyphicon glyphicon-log-in"></span> Login</a>
-                </li>
-                <li class="dropdown" ng-if="loggedIn">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        <font size="5" color="white" face="verdana"><i>{{username}}</i></font> <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a ng-click="logOut()"> Logout</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#"><span class="glyphicon glyphicon-ban-circle"></span> Management</a></li>
-                    </ul>
-                </li>
-                <!--
-                <li ng-if="loggedIn">
-                    <a ng-click="logOut()">
-                        <span class="glyphicon glyphicon-log-in"></span> Logout</a>
-                </li>
--->
-                <!--                <li><a href="#"><span class="glyphicon glyphicon-ban-circle"></span> Management</a></li>-->
-            </ul>
+<!-- Start Navigation -->
+<nav class="navbar navbar-default bootsnav">
+
+    <!-- Start Top Search -->
+    <div class="top-search">
+        <div class="container">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search">
+                <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+            </div>
         </div>
     </div>
-</div>
+    <!-- End Top Search -->
+
+    <div class="container">
+        <!-- Start Atribute Navigation -->
+        <div class="attr-nav">
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-envelope-o"></i>
+                        <span class="badge">3</span>
+                    </a>
+                    <ul class="dropdown-menu cart-list">
+                        <li>
+                            <a href="#" class="photo"><img src="images/thumb/thumb01.jpg" class="cart-thumb" alt="" /></a>
+                            <!--
+                            <h6><a href="#">Delica omtantur </a></h6>
+                            <p>2x - <span class="price">$99.99</span></p>
+-->
+                            <P>Hello! Welcome.</P>
+                        </li>
+                        <li>
+                            <a href="#" class="photo"><img src="images/thumb/thumb02.jpg" class="cart-thumb" alt="" /></a>
+                            <P>Guide.</P>
+                        </li>
+                    </ul>
+                </li>
+                <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+            </ul>
+        </div>
+        <!-- End Atribute Navigation -->
+
+        <!-- Start Header Navigation -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+            <a class="navbar-brand" href="http://www.anatasmloz.com"><img src="images/brand/logo-black.png" class="logo" alt=""></a>
+        </div>
+        <!-- End Header Navigation -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                <li ng-class="{active: stateis('index')}"><a ui-sref="index">主页</a></li>
+                <li ng-class="{active: stateis('aboutus')}"><a ui-sref="aboutus">关于我们</a></li>
+                <li ng-class="{active: stateis('download')}"><a ui-sref="download">校内资料共享</a></li>
+                <li class="dropdown megamenu-fw">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">分类</a>
+                    <ul class="dropdown-menu megamenu-content" role="menu">
+                        <li>
+                            <div class="row">
+                                <div class="col-menu col-md-3">
+                                    <h6 class="title">Title Menu One</h6>
+                                    <div class="content">
+                                        <ul class="menu-col">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- end col-3 -->
+                                <div class="col-menu col-md-3">
+                                    <h6 class="title">Title Menu Two</h6>
+                                    <div class="content">
+                                        <ul class="menu-col">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- end col-3 -->
+                                <div class="col-menu col-md-3">
+                                    <h6 class="title">Title Menu Three</h6>
+                                    <div class="content">
+                                        <ul class="menu-col">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-menu col-md-3">
+                                    <h6 class="title">Title Menu Four</h6>
+                                    <div class="content">
+                                        <ul class="menu-col">
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                            <li><a href="#">Custom Menu</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- end col-3 -->
+                            </div>
+                            <!-- end row -->
+                        </li>
+                    </ul>
+                </li>
+                <li ng-if="!loggedIn">
+                    <a ng-click="openLogin()">
+                        <span class=""></span>加入我们</a>
+                </li>
+                <li ng-if="loggedIn" class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{username}}</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">个人信息</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <!--
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sub Menu</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Custom Menu</a></li>
+                                <li><a href="#">Custom Menu</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sub Menu</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Custom Menu</a></li>
+                                        <li><a href="#">Custom Menu</a></li>
+                                        <li><a href="#">Custom Menu</a></li>
+                                        <li><a href="#">Custom Menu</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Custom Menu</a></li>
+                            </ul>
+                        </li>
+-->
+                        <li><a ng-click="logOut()">注销登录</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">诗社</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+
+</nav>
