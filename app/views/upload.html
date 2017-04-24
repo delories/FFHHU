@@ -1,0 +1,111 @@
+<br>
+<br>
+<br>
+<br>
+<div class="container" ng-if="!startUpload">
+    <form enctype="multipart/form-data" ng-submit="addFile()" id="res_form">
+        <div class="form-group row">
+            <label for="colleage" class="col-xs-2 col-form-label">所属学院</label>
+            <div class="col-xs-8">
+                <select class="form-control" id="colleage" ng-model="uploadFile.colleage" required>
+                  <option selected>物联</option>
+                  <option>企管</option>
+                  <option>机电</option>
+                  <option>公共基础课</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="cousera" class="col-xs-2 col-form-label">所属课程</label>
+            <div class="col-xs-8">
+                <angucomplete-alt id="cousera" placeholder="Input the keyword and choose your course" pause="100" selected-object="selectedCousera" local-data="couseras" search-fields="name" title-field="name" minlength="1" input-class="form-control form-control-small" required />
+            </div>
+        </div>
+        <!--
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-3">
+                <p style="color:red">由于不可知原因，请将上述结果复制到下面的输入框，抱歉。</p>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="temporary" class="col-xs-2 col-form-label">所属课程</label>
+            <div class="col-xs-8">
+                <input type="text" class="form-control" id="temporary" value="不限" ng-model="uploadFile.cousera" required>
+            </div>
+        </div>
+-->
+        <div class="form-group row">
+            <label for="teacher" class="col-xs-2 col-form-label">任课老师(可选）</label>
+            <div class="col-xs-8">
+                <input type="text" class="form-control" id="teacher" value="不限" ng-model="uploadFile.teacher">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="year" class="col-xs-2 col-form-label">年份(可选)</label>
+            <div class="col-xs-8">
+                <select class="form-control" id="year" ng-model="uploadFile.year" required>
+                  <option selected>不限</option>
+                  <option>2018</option>
+                  <option>2017</option>
+                  <option>2016</option>
+                  <option>2015</option>
+                  <option>2014</option>
+                  <option>2013</option>
+                  <option>2012</option>
+                  <option>2011</option>
+                  <option>2010</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="filename" class="col-xs-2 col-form-label">文件名(检索用)</label>
+            <div class="col-xs-8">
+                <input type="text" class="form-control" id="filename" required ng-model="uploadFile.filename">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="documents" class="col-xs-2 col-form-label">上传文件</label>
+            <div class="col-xs-8">
+                <input type="file" class="" id="documents" required ng-model="uploadFile.documents" name="documents">
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="form-group row">
+            <div class="col-xs-offset-8 col-xs-2">
+                <button type="submit" class="btn btn-primary">开始上传</button>
+            </div>
+        </div>
+    </form>
+</div>
+<br>
+<br>
+<div class="container" ng-if="startUpload">
+    <div class="container">
+        <div class="row text-center">
+            <h3 class="white">Loading</h3>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="loader"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

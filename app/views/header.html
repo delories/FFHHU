@@ -56,7 +56,13 @@
             <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
                 <li ng-class="{active: stateis('index')}"><a ui-sref="index">主页</a></li>
                 <li ng-class="{active: stateis('aboutus')}"><a ui-sref="aboutus">关于我们</a></li>
-                <li ng-class="{active: stateis('download')}"><a ui-sref="download">校内资料共享</a></li>
+                <li class="dropdown">
+                    <a ui-sref="download" class="dropdown-toggle" data-toggle="dropdown">校内资料共享</a>
+                    <ul class="dropdown-menu">
+                        <li ng-class="{active: stateis('download')}"><a ui-sref="download">资料下载</a></li>
+                        <li ng-class="{active: stateis('upload')}"><a ui-sref="upload">资料上传</a></li>
+                    </ul>
+                </li>
                 <li class="dropdown megamenu-fw">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">分类</a>
                     <ul class="dropdown-menu megamenu-content" role="menu">

@@ -25,6 +25,8 @@ module.exports = function(config) {
       'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/angular-cookies/angular-cookies.js',
       'bower_components/angular-resource/angular-resource.js',
+      'bower_components/angucomplete-alt/angucomplete-alt.js',
+      'bower_components/bootstrap-fileinput/js/fileinput.min.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

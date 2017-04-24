@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-var app = angular.module('ffhhuApp', ['ui.router', 'ngResource', 'ngDialog']);
+var app = angular.module('ffhhuApp', ['ui.router', 'ngResource', 'ngDialog', 'angucomplete-alt']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
@@ -24,7 +24,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                     //                controller: 'IndexController'
                 },
                 'footer': {
-                    templateUrl: 'views/footer.html',
+                    //templateUrl: 'views/footer.html',
                 }
             }
         })
@@ -60,6 +60,22 @@ app.config(function ($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        .state('upload', {
+            url: '/upload',
+            views: {
+                'header': {
+                    templateUrl: 'views/header.html',
+                    controller: 'HeadCtrl'
+                },
+                'content': {
+                    templateUrl: 'views/upload.html',
+                    controller: 'UploadController'
+                },
+                'footer': {
+                    templateUrl: 'views/footer.html',
+                }
+            }
+        });
 
     $urlRouterProvider.otherwise('/');
-})
+});
