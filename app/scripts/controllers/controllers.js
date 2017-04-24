@@ -128,7 +128,8 @@ var app = angular.module('ffhhuApp')
 
 }])
 
-.controller('UploadController', ['$scope', '$localStorage', 'UpFactory', 'AuthFactory', '$rootScope', '$http', 'ngDialog', 'CouseraFactory', 'baseURL', '$window', function ($scope, $localStorage, UpFactory, AuthFactory, $rootScope, $http, ngDialog, CouseraFactory, baseURL, $window) {
+.controller('UploadController', ['$scope', '$localStorage', 'UpFactory', 'AuthFactory', '$rootScope', '$http', 'ngDialog', 'CouseraFactory', 'baseURL', '$window', 'FileUploader', function ($scope, $localStorage, UpFactory, AuthFactory, $rootScope, $http, ngDialog, CouseraFactory, baseURL, $window, FileUploader) {
+    $scope.uploader = new FileUploader();
     $scope.selectedCousera = {};
     $scope.uploadFile = {};
     $scope.startUpload = false;
@@ -139,9 +140,9 @@ var app = angular.module('ffhhuApp')
     };
     $scope.addFile = function () {
         var vv = document.getElementById('cousera');
-        console.log(vv);
-        console.log(vv.selectedCousera);
-        console.log($scope.uploadFile.cousera);
+//        console.log(vv);
+//        console.log(vv.selectedCousera);
+//        console.log($scope.uploadFile.cousera);
         $scope.uploadFile.token = AuthFactory.getToken();
         console.log($scope.uploadFile);
         var myform = document.getElementById('res_form');

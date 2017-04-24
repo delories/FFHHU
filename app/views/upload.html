@@ -7,33 +7,22 @@
         <div class="form-group row">
             <label for="colleage" class="col-xs-2 col-form-label">所属学院</label>
             <div class="col-xs-8">
-                <select class="form-control" id="colleage" ng-model="uploadFile.colleage" required>
-                  <option selected>物联</option>
+                <select required class="form-control" id="colleage" ng-model="uploadFile.colleage">
+                  <option>物联</option>
                   <option>企管</option>
                   <option>机电</option>
                   <option>公共基础课</option>
+                  <option>考研及专业书籍</option>
+                  <option>电子书资源</option>
                 </select>
             </div>
         </div>
         <div class="form-group row">
-            <label for="cousera" class="col-xs-2 col-form-label">所属课程</label>
+            <label for="cousera" class="col-xs-2 col-form-label">所属课程(/专业/图书类别)</label>
             <div class="col-xs-8">
                 <angucomplete-alt id="cousera" placeholder="Input the keyword and choose your course" pause="100" selected-object="selectedCousera" local-data="couseras" search-fields="name" title-field="name" minlength="1" input-class="form-control form-control-small" required />
             </div>
         </div>
-        <!--
-        <div class="row">
-            <div class="col-xs-8 col-xs-offset-3">
-                <p style="color:red">由于不可知原因，请将上述结果复制到下面的输入框，抱歉。</p>
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="temporary" class="col-xs-2 col-form-label">所属课程</label>
-            <div class="col-xs-8">
-                <input type="text" class="form-control" id="temporary" value="不限" ng-model="uploadFile.cousera" required>
-            </div>
-        </div>
--->
         <div class="form-group row">
             <label for="teacher" class="col-xs-2 col-form-label">任课老师(可选）</label>
             <div class="col-xs-8">
@@ -58,15 +47,22 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="filename" class="col-xs-2 col-form-label">文件名(检索用)</label>
+            <label for="filename" class="col-xs-2 col-form-label">文件名</label>
             <div class="col-xs-8">
                 <input type="text" class="form-control" id="filename" required ng-model="uploadFile.filename">
+            </div>
+
+        </div>
+        <div class="form-group row">
+            <label for="fileType" class="col-xs-2 col-form-label">文件格式(如zip,jpg)</label>
+            <div class="col-xs-8">
+                <input type="text" class="form-control" id="fileType" required ng-model="uploadFile.fileType" name="fileType" value="zip">
             </div>
         </div>
         <div class="form-group row">
             <label for="documents" class="col-xs-2 col-form-label">上传文件</label>
             <div class="col-xs-8">
-                <input type="file" class="" id="documents" required ng-model="uploadFile.documents" name="documents">
+                <input type="file" class="" id="documents" required ng-model="uploadFile.documents" name="documents" required>
             </div>
         </div>
         <br>
@@ -77,6 +73,13 @@
             </div>
         </div>
     </form>
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-0">
+            <a style="color:red" href="http://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E5%9B%BE%E4%B9%A6%E9%A6%86%E5%9B%BE%E4%B9%A6%E5%88%86%E7%B1%BB%E6%B3%95">图书分类请参考此处</a>
+
+        </div>
+    </div>
+    <br>
 </div>
 <br>
 <br>

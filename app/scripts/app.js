@@ -8,7 +8,7 @@
  *
  * Main module of the application.
  */
-var app = angular.module('ffhhuApp', ['ui.router', 'ngResource', 'ngDialog', 'angucomplete-alt']);
+var app = angular.module('ffhhuApp', ['ui.router', 'ngResource', 'ngDialog', 'angucomplete-alt', 'angularFileUpload']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider

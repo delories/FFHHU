@@ -1,19 +1,17 @@
 <div class="container">
     <br>
     <br>
-    <ol class="breadcrumb">
-        <li><a href="#">{{filter.colleage}}</a></li>
-        <li><a href="#">{{filter.year}}</a></li>
-        <li class="active">{{filter.cousera}}</li>
-    </ol>
     <br>
     <br>
     <div class="row">
         <div class="col-xs-12 col-xs-offset-0">
+            <div ng-click="filter.colleage='' " class="btn btn-info">不限</div>
             <div ng-click="filter.colleage='企管' " class="btn btn-success">企业管理学院</div>
             <div ng-click="filter.colleage='物联' " class="btn btn-warning">物联网学院</div>
             <div ng-click="filter.colleage='机电' " class="btn btn-danger">机电工程学院</div>
             <div ng-click="filter.colleage='公共基础课' " class="btn btn-danger">公共基础课</div>
+            <div ng-click="filter.colleage='考研及专业书籍' " class="btn btn-success">考研及专业书籍</div>
+            <div ng-click="filter.colleage='电子书资源' " class="btn btn-danger">电子书资源</div>
         </div>
     </div>
     <br>
@@ -49,12 +47,24 @@
     <br>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <ol class="breadcrumb">
+        <li><a href="#">{{filter.colleage}}</a></li>
+        <li><a href="#">{{filter.year}}</a></li>
+        <li class="active">{{filter.cousera}}</li>
+    </ol>
+    <br>
+    <br>
+    <br>
 
     <div class="table-responsive">
         <table class="table">
             <caption></caption>
             <thead>
                 <tr>
+                    <th>类别</th>
                     <th>资源名称</th>
                     <th>所属课程</th>
                     <th>年份</th>
@@ -69,6 +79,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="file in filterRes">
+                    <td>{{file.colleage}}</td>
                     <td>{{file.filename}}</td>
                     <td>{{file.cousera}}</td>
                     <td>{{file.year}}</td>
