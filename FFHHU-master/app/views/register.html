@@ -1,0 +1,32 @@
+<div class="ngdialog-message">
+    <div class="">
+        <h3>注册</h3>
+    </div>
+    <div class="">&nbsp;</div>
+    <div class="">
+        <form ng-submit="doRegister()">
+            <div class="form-group">
+                <label class="sr-only" for="username">Username</label>
+                <input type="text" class="form-control input-sm" id="username" placeholder="Username" ng-model="registration.username">
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="password">Password</label>
+                <input type="password" class="form-control input-sm" id="password" placeholder="Password" ng-model="registration.password">
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="password">Email</label>
+                <input type="email" class="form-control input-sm" id="email" placeholder="Email Address" ng-model="registration.email">
+            </div>
+            <div class="form-group container">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <button type="submit" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Click here to submit"><i class="fa fa-check fa-3x" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="col-xs-2 col-xs-offset-1">
+                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Click here to cancel" ng-click=closeThisDialog("Cancel") ><i class="fa fa-times fa-3x" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="de">
+<!--<![endif]-->
+
+
+<head>
+    <meta charset="utf-8">
+    <title>FFHHU</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- CSS -->
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.tmp) styles/bower.css -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../bower_components/angucomplete-alt/angucomplete-alt.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap-fileinput/css/fileinput.min.css">
+    <!-- endbuild -->
+
+    <!-- build:css(.tmp) styles/npm.css -->
+    <link rel="stylesheet" href="../node_modules/ng-dialog/css/ngDialog.min.css">
+    <link rel="stylesheet" href="../node_modules/ng-dialog/css/ngDialog-theme-default.min.css">
+    <link rel="stylesheet" href="../node_modules/ng-dialog/css/ngDialog-theme-plain.min.css">
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.min.css">
+    <!-- endbuild -->
+
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/bootstrap-social.css">
+    <link rel="stylesheet" href="styles/anatas.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/bootsnav.css">
+    <!-- endbuild -->
+</head>
+
+<body ng-app="ffhhuApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ui-view="header"></div>
+    <div ui-view="content"></div>
+    <div ui-view="footer"></div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <!--
+    <script>
+        ! function(A, n, g, u, l, a, r) {
+            A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+                    (A[l].q = A[l].q || []).push(arguments)
+                }, A[l].l = +new Date, a = n.createElement(g),
+                r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+        }(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
+
+    </script>
+-->
+
+    <!-- build:js({.tmp,app}) scripts/bower.js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="../bower_components/angucomplete-alt/dist/angucomplete-alt.min.js"></script>
+    <script src="../bower_components/bootstrap-fileinput/js/fileinput.min.js"></script>
+    <script src="../bower_components/bootstrap-fileinput/themes/fa/theme.js"></script>
+    <script src="../bower_components/bootstrap-fileinput/js/locales/zh.js"></script>
+    <script src="../bower_components/angular-file-upload/dist/angular-file-upload.min.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/npm.js -->
+    <script src="../node_modules/ng-dialog/js/ngDialog.min.js"></script>
+    <script src="../node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="../node_modules/theaterjs/dist/theater.min.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/3d-tv.js"></script>
+    <!-- endbuild -->
+    
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/controllers.js"></script>
+    <script src="scripts/controllers/services.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/header.js -->
+    <script src="scripts/bootsnav.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
